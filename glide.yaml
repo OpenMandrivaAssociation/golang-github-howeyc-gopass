@@ -1,0 +1,7 @@
+import:
+- package: golang.org/x/crypto
+  subpackages:
+  - ssh/terminal
+  version: 351dc6a5bf92a5f2ae22fadeee08eb6a45aa2d93
+package: github.com/howeyc/gopass
+

@@ -1,0 +1,25 @@
+From 0a1e808ae9cbd3d519c792be12e1fb4e99424a69 Mon Sep 17 00:00:00 2001
+From: Jan Chaloupka <jchaloup@redhat.com>
+Date: Tue, 12 Jun 2018 14:07:14 +0200
+Subject: [PATCH] Fix formatting error
+
+---
+ pass_test.go | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/pass_test.go b/pass_test.go
+index 654d362..10e29a1 100644
+--- a/pass_test.go
++++ b/pass_test.go
+@@ -60,7 +60,7 @@ func TestGetPasswd(t *testing.T) {
+ 			result, err := getPasswd(masked)
+ 			os.Stdout = origStdOut
+ 			if err != nil {
+-				t.Errorf("Error getting password:", err.Error())
++				t.Errorf("Error getting password: %v", err.Error())
+ 			}
+ 			leftOnBuffer := flushStdin()
+ 
+-- 
+2.7.5
+
